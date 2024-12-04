@@ -13,7 +13,8 @@ html {
   height: 700px;
   left: 0;
   object-fit: cover;
-  background-position: right;
+  background-position: center;
+  background-image: url(img/main.png);
 }
 
 .home_block {
@@ -36,7 +37,6 @@ html {
 .home_block_content {
   width: 50%;
   position: relative;
-  background-size: cover;
   z-index: 2;
 }
 
@@ -178,6 +178,24 @@ html {
   margin-bottom: 60px;
 }
 
+.mob_content_h1 {
+  display: none;
+}
+
+.mob_h1 {
+  display: none;
+  min-width: 0 !important;
+  width: 335px;
+  height: 152px !important;
+  font-size: 28px !important;
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #313131;
+  line-height: 135%;
+  margin-bottom: 0 !important;
+}
+
 .info_block h1 span {
   color: #f54932;
 }
@@ -199,7 +217,12 @@ table {
   margin-bottom: 48px;
 }
 
+.mob_table {
+  display: none;
+}
+
 td {
+  font-size: 20px;
   font-family: "Golos Text", sans-serif;
   font-weight: normal;
   border: 1px solid #d0d0d0;
@@ -365,6 +388,10 @@ table td:last-child {
   align-items: center;
 }
 
+.mob_slider_btns {
+  display: none;
+}
+
 .slider_btns img {
   cursor: pointer;
 }
@@ -434,4 +461,202 @@ footer {
   font-size: 16px;
   font-family: "Golos Text", sans-serif;
   line-height: 120%;
+}
+
+@media (max-width: 1222px) {
+  .home_background {
+    height: 774px;
+    width: 375px;
+    background-image: url(img/mob_main.png);
+  }
+
+  .home_block {
+    width: 375px;
+    height: 774px;
+    padding-left: calc((100% - 375px) / 2);
+    padding-right: calc((100% - 375px) / 2);
+    align-items: center;
+  }
+
+  .home_block_content {
+    width: 335px;
+    height: 393px;
+  }
+
+  .home_block_content h1 {
+    width: 335px;
+    height: 160px;
+    font-size: 36px;
+  }
+
+  .home_block_content h3 {
+    width: 335px;
+    height: 69px;
+    font-size: 18px;
+  }
+
+  .home_block_btns {
+    width: 335px;
+    flex-direction: column;
+  }
+
+  .home_block_btn {
+    width: 100%;
+    height: 47px;
+  }
+
+  .info_block {
+    margin-top: 48px;
+    width: 375px;
+    padding-left: calc((100% - 375px) / 2);
+    padding-right: calc((100% - 375px) / 2);
+    gap: 24px;
+    margin-bottom: 120px;
+  }
+  .first_group {
+    width: 335px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .first_group img {
+    width: 335px;
+    height: 212.56px;
+  }
+
+  .info_block h1 {
+    display: none;
+  }
+
+  .mob_h1 {
+    display: block !important;
+  }
+
+  .second_group {
+    flex-direction: column;
+    width: 335px;
+  }
+
+  .second_group img {
+    width: 335px;
+    height: 402px;
+    margin-bottom: 24px;
+  }
+
+  .mob_content_h1 {
+    display: block !important;
+    min-width: 0 !important;
+    width: 335px;
+    height: 228px !important;
+    font-size: 28px !important;
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #313131;
+    line-height: 135%;
+    margin-bottom: 44px !important;
+  }
+
+  .desk_table {
+    display: none;
+  }
+
+  .mob_table {
+    display: block;
+    height: 368px;
+    margin-bottom: 20px;
+  }
+
+  .info_description {
+    font-size: 18px;
+  }
+
+  .stages_block {
+    width: 375px;
+    padding-left: calc((100% - 375px) / 2);
+    padding-right: calc((100% - 375px) / 2);
+    margin-bottom: 120px;
+  }
+
+  .stages_block h1 {
+    width: 335px;
+    font-size: 36px;
+  }
+
+  .stages_block_title {
+    width: 335px;
+    flex-direction: column;
+    align-items: normal;
+    gap: 12px;
+  }
+
+  .stages_block_title div {
+    font-size: 18px;
+  }
+
+  .participants_block {
+    width: 375px;
+    padding-left: calc((100% - 375px) / 2);
+    padding-right: calc((100% - 375px) / 2);
+    margin-bottom: 80px;
+  }
+
+  .participants_block_header {
+    margin-bottom: 40px;
+  }
+
+  .participants_block_header h1 {
+    font-size: 36px;
+  }
+
+  .slider_btns {
+    display: none;
+  }
+
+  .mob_slider_btns {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  .mob_slider_btns img {
+    width: 36px;
+    height: 36px;
+  }
+
+  #card_container {
+    width: 375px;
+  }
+
+  .participant_card {
+    min-width: 100%;
+  }
+
+  .participant_card img {
+    width: 244px;
+    height: 244px;
+  }
+
+  .participant_name {
+    font-size: 24px;
+  }
+
+  .participant_description {
+    font-size: 20px;
+  }
+
+  footer {
+    width: 375px;
+    height: 214px;
+    padding-left: calc((100% - 375px) / 2);
+    padding-right: calc((100% - 375px) / 2);
+  }
+
+  .marquee {
+    width: 375px;
+  }
 }

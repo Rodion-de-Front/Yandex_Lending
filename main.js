@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Функция для обновления положения слайдера
   function updateSliderPosition() {
-    cardContainer.style.transform = `translateX(-${currentSlide * 33.33}%)`;
+    if (window.screen.width < 1000) {
+      cardContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    } else {
+      cardContainer.style.transform = `translateX(-${currentSlide * 33.33}%)`;
+    }
   }
 
   // При клике на кнопку "вправо" сдвигаем слайде р

@@ -17,7 +17,7 @@
     <title>Document</title>
   </head>
   <body>
-    <img class="home_background" src="img/main.png" />
+    <div class="home_background" src="img/main.png" ></div>
     <div class="home_block">
       <img class="logo" alt="logo" src="img/logo.png" />
       <div class="home_block_content">
@@ -62,7 +62,16 @@
           турнир посетите лекцию на тему:<br />
           <span>«Плодотворная дебютная идея»</span>
         </h1>
+        <h1 class="mob_h1">
+            Чтобы поддержать<br />
+            Международный васюкинский<br />
+            турнир
+        </h1>
         <img alt="info_picture" src="img/info.png" />
+        <h1 class="mob_h1">
+            посетите лекцию<br /> на тему:<br />
+            <span>«Плодотворная<br /> дебютная идея»</span>
+        </h1>
       </div>
       <div class="second_group">
         <img alt="info_picture" src="img/picture.png" />
@@ -73,8 +82,13 @@
               <span>в шахматы на 160 досках</span><br />
               гроссмейстера О. Бендера
             </h1>
+            <h1 class="mob_content_h1">
+                и Сеанс<br /><span>одновременной<br />игры</span>
+                <span>в шахматы<br />на 160 досках</span><br />
+                гроссмейстера<br />О. Бендера
+            </h1>
           </div>
-          <table>
+          <table class="desk_table">
             <tr>
               <td>Место проведения:</td>
               <td><b>Клуб «Картонажник»</b></td>
@@ -96,6 +110,23 @@
               <td>
                 <b><s>100 руб.</s> 21 руб. 16 коп.</b>
               </td>
+            </tr>
+          </table>
+          <table class="mob_table">
+            <tr>
+              <td>Место проведения:<br /><b>Клуб «Картонажник»</b></td>
+            </tr>
+            <tr>
+              <td>Дата и время мероприятия:<br /><b>22 июня 1927 г. в 18:00</b></td>
+            </tr>
+            <tr>
+              <td>Стоимость входных билетов:<br /><b>20 коп.</b></td>
+            </tr>
+            <tr>
+              <td>Плата за игру:<br /><b>50 коп.</b></td>
+            </tr>
+            <tr>
+              <td>Взнос на телеграммы:<br /><b><s>100 руб.</s> 21 руб. 16 коп.</b></td>
             </tr>
           </table>
           <h3 class="info_description">
@@ -225,6 +256,19 @@
                 <button class="more_about_participant_btn">Подробнее</button>
             </div>
         </div>
+      </div>
+      <div class="mob_slider_btns">
+        <img
+          alt="left_btn"
+          id="turn_left_btn"
+          src="img/carousel_button_left.png"
+        />
+        <div><span id="slides_counter">3</span> / 6</div>
+        <img
+          alt="left_btn"
+          id="turn_right_btn"
+          src="img/carousel_button_right.png"
+        />
       </div>
     </div>
 
