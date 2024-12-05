@@ -78,7 +78,7 @@ html {
 .home_block_btn {
   font-family: "Golos Text", sans-serif;
   font-size: 16px;
-  width: 50%;
+  width: 263px;
   height: 72px;
   display: flex;
   justify-content: center;
@@ -87,9 +87,17 @@ html {
   line-height: 130%;
   cursor: pointer;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .button_support {
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.mob_button_support {
+  display: none;
   text-align: center;
   background-color: #1f1f1f;
   color: #ffffff;
@@ -99,6 +107,7 @@ html {
   color: #1f1f1f;
   background-color: transparent;
   border: 3px solid #1f1f1f;
+  box-sizing: border-box;
 }
 
 .running_row {
@@ -287,6 +296,10 @@ table td:last-child {
   margin-bottom: 54px;
 }
 
+.mob_stages_block_title {
+  display: none;
+}
+
 .stages_block_title div {
   font-size: 20px;
   font-family: "Golos Text", sans-serif;
@@ -311,6 +324,93 @@ table td:last-child {
   display: flex;
   width: 100%;
   gap: 20px;
+}
+
+.mob_stages_card_container {
+  position: relative;
+}
+
+/* Общий стиль для слайдера */
+#mob_slider {
+  position: relative;
+  width: 335px;
+  height: 370px;
+  overflow: hidden;
+}
+
+.plane_img {
+  width: 335px;
+  height: 182px;
+  position: absolute;
+  top: -108px;
+  z-index: 2;
+}
+
+/* Слайды */
+.mob_slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 335px;
+}
+
+.mob_slide {
+  width: 335px;
+  height: 300px;
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(img/background_card.png);
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 28px;
+}
+
+.mob_slide section {
+  display: flex;
+  gap: 16px;
+}
+
+/* Удаляем последний бордер */
+.slide:last-child {
+  border-right: none;
+}
+
+/* Кнопки и навигация */
+.navigation {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+#prev-btn,
+#next-btn {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+/* Точки */
+.dots {
+  display: flex;
+  width: 74px;
+  height: 10px;
+  justify-content: space-between;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #313131;
 }
 
 .stage_content {
@@ -464,18 +564,25 @@ footer {
 }
 
 @media (max-width: 1222px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .home_background {
     height: 774px;
-    width: 375px;
     background-image: url(img/mob_main.png);
   }
 
   .home_block {
     width: 375px;
     height: 774px;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
     padding-left: calc((100% - 375px) / 2);
     padding-right: calc((100% - 375px) / 2);
-    align-items: center;
   }
 
   .home_block_content {
@@ -505,11 +612,21 @@ footer {
     height: 47px;
   }
 
+  .button_support {
+    display: none;
+  }
+
+  .mob_button_support {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+
   .info_block {
     margin-top: 48px;
     width: 375px;
-    padding-left: calc((100% - 375px) / 2);
-    padding-right: calc((100% - 375px) / 2);
+    padding-left: 20px;
+    padding-right: 20px;
     gap: 24px;
     margin-bottom: 120px;
   }
@@ -573,8 +690,8 @@ footer {
 
   .stages_block {
     width: 375px;
-    padding-left: calc((100% - 375px) / 2);
-    padding-right: calc((100% - 375px) / 2);
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 120px;
   }
 
@@ -584,20 +701,49 @@ footer {
   }
 
   .stages_block_title {
+    display: none;
+  }
+
+  .mob_stages_block_title {
+    display: block;
     width: 335px;
     flex-direction: column;
     align-items: normal;
     gap: 12px;
   }
 
-  .stages_block_title div {
+  .mob_stages_block_title div {
     font-size: 18px;
+    font-family: "Golos Text", sans-serif;
+    font-weight: normal;
+    line-height: 120%;
+    color: #3057a2;
+    margin-bottom: 108px;
+  }
+
+  .stages_card_container {
+    display: none;
+  }
+
+  .stage_content {
+    position: static;
+  }
+
+  .text {
+    font-size: 18px;
+    width: 239px;
+    height: 88px;
+  }
+
+  .number {
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .participants_block {
     width: 375px;
-    padding-left: calc((100% - 375px) / 2);
-    padding-right: calc((100% - 375px) / 2);
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 80px;
   }
 
@@ -628,6 +774,11 @@ footer {
     height: 36px;
   }
 
+  .slider {
+    display: flex;
+    justify-content: center;
+  }
+
   #card_container {
     width: 375px;
   }
@@ -650,13 +801,13 @@ footer {
   }
 
   footer {
-    width: 375px;
     height: 214px;
-    padding-left: calc((100% - 375px) / 2);
-    padding-right: calc((100% - 375px) / 2);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .marquee {
-    width: 375px;
+    font-size: 16px;
+    height: 38px;
   }
 }
