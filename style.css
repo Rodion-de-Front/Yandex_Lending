@@ -327,6 +327,7 @@ table td:last-child {
 }
 
 .mob_stages_card_container {
+  display: none;
   position: relative;
 }
 
@@ -723,6 +724,10 @@ footer {
 
   .stages_card_container {
     display: none;
+  }
+
+  .mob_stages_card_container {
+    display: block;
   }
 
   .stage_content {
